@@ -1,0 +1,71 @@
+// if use spring framewoork
+
+first get external libraries
+int pom.xml
+add dependecy
+
+<dependency>
+add here spring context
+group id aritifact id reload the changes
+
+</dependency>
+now create applicationcontext
+context=ClassPathXmlApplicationContext("spring.xml");
+Dev obj=(Dev)context.getBean("dev" or Dev.class)
+//to do this you have to iniitialize bean factory
+
+now create xml comfiguration
+add above in classpath
+
+in main create resources then craete spring.xml
+// do config now
+add xml version for beans  from net
+<beans xmlns=.......................>
+   <bean id="dev" class="com.example.Dev">
+
+   </bean>
+    <bean id="laptop" class="com.example.Laptop">
+
+      </bean>
+</beans>
+// constructor and setter injection
+in Dev.java
+private Laptop laptop;
+to run laptop.compile()
+introducing age  setter of age
+then in app Dev obj  obj.getAge();
+
+inside bean use
+   <property name="age" value "12" />
+
+   similary for constructor
+  use <constructor-arg value="14"/>// if one parameter
+  if two the use index
+  <constructor-arg index="0" value="14"/>
+  <constructor-arg index="1" value="20000"/>//lets say age and salary
+  the above for private int age;
+
+  now how for reference variable like private Laptop laptop
+  <property name="laptop"   ref="laptop" {same that is bean id for laptop}    >
+  this is known as wiring make sure for setter in that
+  create constructor in dev
+  <constructor-arg ref="laptop> in that bean of dev
+
+
+  //similarly craete deesktop
+  extract inteface same computer
+  now private Computer com
+  include getter setter for com
+  com.compile()
+  <property name="com" ref="laptop" />
+  but since computer is an interface
+  inject laptop above
+  if for desktop as well include bean of it
+  <property name="com" ref="desktop" />
+  if id for laptop now com
+  res="com" now in bean add autowire ="byName"
+  or do by byType
+  bit in two type of comfusion add in that beans primary="true"
+
+  ------------------------------------------------------------------------------
+
