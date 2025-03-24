@@ -15,8 +15,9 @@ public class DemoAppApplication {
 		//dev.build();
 		// di injection using context
 		ApplicationContext context = SpringApplication.run(DemoAppApplication.class, args);
-		Dev obj=context.getBean(Dev.class);
-		obj.build();
+//		Dev obj=context.getBean(Dev.class);
+//		obj.build();
+
 	}
 
 }
