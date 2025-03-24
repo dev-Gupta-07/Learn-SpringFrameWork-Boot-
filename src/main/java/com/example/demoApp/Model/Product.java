@@ -1,11 +1,15 @@
 package com.example.demoApp.Model;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import org.springframework.stereotype.Component;
 
 
 @Component
+@Entity
 public class Product {
+    @Id // to tell that it is primary key
     private int prodId;
     private String prodName;
     private int price;

@@ -30,7 +30,7 @@ public class ProductController {
     public void updateProduct(@RequestBody Product product) {
       productService.updateProduct(product);
     }
-    @DeleteMapping("/produsts/{id}")
+    @DeleteMapping("/products/{id}")
     public void deleteProduct(int id) {
       productService.deleteProduct(id);
     }
